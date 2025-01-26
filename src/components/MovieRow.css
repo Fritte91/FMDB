@@ -1,0 +1,103 @@
+.slider-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  padding: 5px; /* Add padding between movie posters */
+  width: 175px !important;
+  height: 300px !important;
+}
+
+.slick-slide img {
+  width: 100%; /* Make images responsive */
+  max-width: 400px !important; /* Set a max width for the images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.slick-slide img:hover {
+  transform: scale(1.1); /* Scale up the image on hover */
+  z-index: 10; /* Bring the hovered image to the front */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.slick-list {
+  margin: 0; /* Remove margin from the list */
+  padding: 0; /* Remove padding from the list */
+  height: 320px;
+}
+
+.slick-dots {
+  margin-top: 10px; /* Reduce space between dots and images */
+}
+
+.custom-arrow {
+  background: rgba(248, 0, 0, 0.8); /* Background color for arrows */
+  border-radius: 50%; /* Round arrows */
+  width: 30px; /* Width of the arrows */
+  height: 30px; /* Height of the arrows */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1; /* Ensure arrows are above other content */
+}
+
+.next-arrow {
+  right: 10px; /* Position the next arrow */
+}
+
+.prev-arrow {
+  left: 10px; /* Position the previous arrow */
+}
+
+.custom-arrow:hover {
+  background: rgba(255, 255, 255, 0.9); /* Slightly darker background on hover */
+  transform: scale(1.1); /* Scale up the arrow on hover */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.movie-card {
+  margin: 10px; /* Add margin to create space between cards */
+  padding: 0; /* Remove padding */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the image */
+  align-items: center; /* Center the image */
+  width: 240px; /* Set a fixed width for the movie card */
+  height: 360px; /* Set a fixed height for the movie card */
+  overflow: hidden; /* Hide overflow to prevent extra space */
+}
+
+.movie-card img {
+  width: 100%; /* Make the image take full width */
+  height: 100%; /* Make the image take full height */
+  object-fit: contain; /* Ensure the entire image is visible */
+  border-radius: 5px; /* Optional: add some border radius */
+}
+
+.pagination-controls {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the buttons */
+  margin-top: 20px; /* Add some space above the buttons */
+  margin-bottom: 20px; /* Add some space below the buttons */
+}
+
+.pagination-controls button {
+  margin: 0 10px; /* Space between buttons */
+  padding: 10px 15px; /* Button padding */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc; /* Disabled button color */
+  cursor: not-allowed; /* Not allowed cursor */
+}

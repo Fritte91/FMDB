@@ -1,0 +1,38 @@
+.slider-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px; /* Add padding between movie posters */
+}
+
+.slick-slide img {
+  width: 100%; /* Make images responsive */
+  max-width: 200px; /* Set a max width for the images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.custom-arrow {
+  background: rgba(255, 255, 255, 0.8); /* Background color for arrows */
+  border-radius: 50%; /* Round arrows */
+  width: 30px; /* Width of the arrows */
+  height: 30px; /* Height of the arrows */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1; /* Ensure arrows are above other content */
+}
+
+.next-arrow {
+  right: 10px; /* Position the next arrow */
+}
+
+.prev-arrow {
+  left: 10px; /* Position the previous arrow */
+}

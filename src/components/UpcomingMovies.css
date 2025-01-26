@@ -1,0 +1,22 @@
+.upcoming-movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between movie cards */
+}
+
+.movie-card {
+  background: #1e1e1e; /* Dark background for movie cards */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px; /* Padding inside the card */
+  text-align: center; /* Center text */
+  transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.movie-card img {
+  border-radius: 8px; /* Rounded corners for images */
+  width: 100%; /* Responsive image */
+}
+
+.movie-card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
