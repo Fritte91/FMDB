@@ -1,0 +1,46 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes full height */
+}
+
+.navbar {
+  background-color: #121212; /* Example background color */
+  padding: 10px; /* Add padding to the navbar */
+  position: relative; /* Ensure it is positioned correctly */
+  z-index: 10; /* Ensure it is above other elements */
+}
+
+.movie-search-results {
+  flex: 1; /* Allow this section to grow and fill the space */
+  padding: 20px; /* Add padding around the results */
+  margin-top: 20px; /* Add margin to prevent overlap with navbar */
+}
+
+.movie-grid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between grid items */
+}
+
+.movie-card {
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.movie-card img {
+  width: 100%; /* Full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.movie-card:hover img {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.footer {
+  background-color: #121212; /* Example footer background */
+  color: white; /* Example footer text color */
+  text-align: center; /* Center text */
+  padding: 10px; /* Padding for footer */
+}

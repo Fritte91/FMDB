@@ -1,0 +1,55 @@
+.getting-started {
+  padding: 40px; /* Increased padding for more space */
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* White text */
+  font-family: Arial, sans-serif; /* Font style */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  max-width: 800px; /* Limit width for better readability */
+  margin: auto; /* Center the content */
+}
+
+.getting-started h1 {
+  font-size: 2.5em; /* Larger font size for the main heading */
+  margin-bottom: 20px; /* Space below the heading */
+  text-align: center; /* Center the heading */
+  border-bottom: 2px solid #007bff; /* Underline with color */
+  padding-bottom: 10px; /* Space below the border */
+}
+
+.getting-started h2 {
+  font-size: 1.8em; /* Font size for subheadings */
+  margin-top: 30px; /* Space above subheadings */
+  color: #007bff; /* Color for subheadings */
+}
+
+.getting-started p {
+  font-size: 1.1em; /* Font size for paragraphs */
+  line-height: 1.6; /* Line height for readability */
+  margin-bottom: 15px; /* Space below paragraphs */
+}
+
+.getting-started ul {
+  margin-left: 20px; /* Indent unordered lists */
+  list-style-type: disc; /* Use disc bullets */
+}
+
+.getting-started a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.getting-started a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #0056b3; /* Darker blue on hover */
+}
+
+.getting-started .important-note {
+  font-weight: bold; /* Bold text for important notes */
+  margin-top: 20px; /* Space above important notes */
+  color: #ffcc00; /* Highlight important notes */
+  font-size: 1.2em; /* Slightly larger font size */
+  border-top: 2px solid #ffcc00; /* Top border for emphasis */
+  padding-top: 10px; /* Space above the border */
+}

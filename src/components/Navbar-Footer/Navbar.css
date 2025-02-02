@@ -1,0 +1,80 @@
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space between brand and links */
+  align-items: center; /* Center items vertically */
+  background-color: #1e1e1e; /* Dark background */
+  padding: 15px 30px; /* Padding for navbar */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  width: 100%; /* Full width */
+  position: relative; /* Positioning context */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.navbar:hover {
+  background-color: #2a2a2a; /* Darker background on hover */
+}
+
+.navbar-brand {
+  font-size: 24px; /* Increase font size */
+  color: #ffffff; /* White text */
+}
+
+.navbar-links {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Flexbox for horizontal layout */
+}
+
+.navbar-links li {
+  margin: 0 15px; /* Space between links */
+}
+
+.navbar-links a {
+  color: #ffffff; /* White text */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.navbar-search {
+  display: flex; /* Flexbox for search bar */
+  align-items: center; /* Center vertically */
+}
+
+.navbar-search input {
+  padding: 8px; /* Padding for input */
+  border: 1px solid #007bff; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  margin-left: 10px; /* Space between brand and search */
+  background-color: #2a2a2a; /* Dark background for input */
+  color: #ffffff; /* White text */
+  width: 300px; /* Increase width for better readability */
+  height: 40px;
+  font-size: 20px;
+}
+
+.navbar-search button {
+  padding: 8px 12px; /* Padding for button */
+  background-color: #007bff; /* Button color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  margin-left: 5px; /* Space between input and button */
+}
+
+.navbar-search button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

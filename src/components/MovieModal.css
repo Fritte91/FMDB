@@ -1,17 +1,17 @@
-
 .modal {
   position: absolute; /* Position the modal absolutely */
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust position to truly center */
-  background: white; /* Background color */
+  background-color: #fff; /* Background color */
   padding: 20px; /* Padding inside the modal */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
   z-index: 1000; /* Ensure it's above other content */
-  max-width: 600px; /* Set a max width for the modal */
+  max-width: 800px; /* Set a maximum width for the modal */
   width: 90%; /* Responsive width */
-  overflow: hidden; /* Prevent overflow */
+  overflow-y: auto; /* Allow vertical scrolling */
+  max-height: 90vh; /* Limit height to 90% of viewport height */
 }
 
 .overlay {
@@ -25,13 +25,13 @@
 }
 
 .modal h2 {
-  margin: 0 0 10px; /* Margin for the title */
+  margin: 0; /* Remove default margin */
   font-size: 1.5em; /* Font size for the title */
   color: #333; /* Darker color for the title */
 }
 
 .modal p {
-  margin: 5px 0; /* Margin for paragraphs */
+  margin: 10px 0; /* Add some space between paragraphs */
   color: #555; /* Slightly lighter color for text */
 }
 
@@ -67,3 +67,12 @@
 .modal button:hover {
   background-color: #0056b3; /* Darker shade on hover */
 }
+
+.modal img {
+  max-width: 100%; /* Ensure the image does not exceed the modal width */
+  max-height: 400px; /* Set a maximum height for the image */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Center the image */
+  margin: 0 auto; /* Center the image horizontally */
+}
+

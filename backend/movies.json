@@ -30,7 +30,7 @@
         "trailerUrl": "https://www.youtube.com/embed/62zQXABj9GQ?si=sjp1jBo7CIV1t17w",
         "torrentLink": "https://yts.mx/torrent/download/C9FF01F5A2BDB8FE5B978E913797C3BBB8FE17AF",
         "subtitleLink": "https://example.com/subtitle",
-        "image": "/assets/A Dark Place.jpeg"
+        "image": "/assets/A dark Place.jpeg"
     },
     {
         "title": "A Haunting in Venice",
@@ -154,7 +154,7 @@
         "image": "/assets/Black Widow.jpg"
     },
     {
-        "title": "Biss",
+        "title": "Bliss",
         "year": 2006,
         "rating": "7.8",
         "actors": ["Rudy Youngblood", "Dalia Hernández"],
@@ -162,7 +162,7 @@
         "trailerUrl": "https://www.youtube.com/embed/sample_trailer_id",
         "torrentLink": "https://example.com/torrent",
         "subtitleLink": "https://example.com/subtitle",
-        "image": "/assets/Biss.jpeg"
+        "image": "/assets/Bliss.jpg"
     },
     {
         "title": "Carnifex",
@@ -470,7 +470,7 @@
         "trailerUrl": "https://www.youtube.com/embed/sample_trailer_id",
         "torrentLink": "https://example.com/torrent",
         "subtitleLink": "https://example.com/subtitle",
-        "image": "/assets/Gran Turismo.jpeg"
+        "image": "/assets/Gran turismo.jpeg"
     },
     {
         "title": "Grandma's Boy",
@@ -492,7 +492,7 @@
         "trailerUrl": "https://www.youtube.com/embed/sample_trailer_id",
         "torrentLink": "https://example.com/torrent",
         "subtitleLink": "https://example.com/subtitle",
-        "image": "/assets/Gringo.jpeg"
+        "image": "/assets/gringo.jpeg"
     },
     {
         "title": "Guns Akimbo",
@@ -660,7 +660,7 @@
         "image": "/assets/In The Earth.jpg"
     },
     {
-        "title": "In The Land Of Sains & Sinners",
+        "title": "In The Land Of Saints & Sinners",
         "year": 2006,
         "rating": "7.8",
         "actors": ["Rudy Youngblood", "Dalia Hernández"],
@@ -668,7 +668,7 @@
         "trailerUrl": "https://www.youtube.com/embed/sample_trailer_id",
         "torrentLink": "https://example.com/torrent",
         "subtitleLink": "https://example.com/subtitle",
-        "image": "/assets/In The Land Of Sains & Sinners.jpg"
+        "image": "/assets/In The Land Of Saints & Sinners.jpg"
     },
     {
         "title": "In Time",
@@ -965,7 +965,7 @@
         "trailerUrl": "https://www.youtube.com/embed/sample_trailer_id",
         "torrentLink": "https://example.com/torrent",
         "subtitleLink": "https://example.com/subtitle",
-        "image": "/assets/Mulan.jpg"
+        "image": "/assets/Mulan.jpeg"
     },
     {
         "title": "Nightcrawler",

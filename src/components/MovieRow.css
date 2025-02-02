@@ -1,5 +1,6 @@
 .slider-container {
   width: 100%;
+  overflow: hidden;
   margin: 0 auto;
 }
 
@@ -26,10 +27,20 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
 }
 
+.slick-slider {
+  background: transparent; /* Remove gray background */
+}
+
 .slick-list {
-  margin: 0; /* Remove margin from the list */
-  padding: 0; /* Remove padding from the list */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  overflow: visible; /* Ensure overflow is visible */
   height: 320px;
+}
+
+.slick-track {
+  display: flex; /* Use flexbox for alignment */
+  width: 100%;
 }
 
 .slick-dots {
@@ -63,19 +74,20 @@
 }
 
 .movie-card {
-  margin: 10px; /* Add margin to create space between cards */
-  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin from movie cards */
+  padding: 0; /* Remove padding from movie cards */
   display: flex; /* Use flexbox for alignment */
   justify-content: center; /* Center the image */
   align-items: center; /* Center the image */
   width: 240px; /* Set a fixed width for the movie card */
-  height: 360px; /* Set a fixed height for the movie card */
+  
   overflow: hidden; /* Hide overflow to prevent extra space */
 }
 
 .movie-card img {
-  width: 100%; /* Make the image take full width */
-  height: 100%; /* Make the image take full height */
+  width: 100%; /* Ensure images take full width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any inline spacing */
   object-fit: contain; /* Ensure the entire image is visible */
   border-radius: 5px; /* Optional: add some border radius */
 }
@@ -100,4 +112,23 @@
 .pagination-controls button:disabled {
   background-color: #ccc; /* Disabled button color */
   cursor: not-allowed; /* Not allowed cursor */
+}
+
+.slick-prev, .slick-next {
+  z-index: 1; /* Ensure arrows are above other content */
+  font-size: 20px; /* Adjust size if needed */
+  color: white; /* Change color if needed */
+}
+
+.slick-prev {
+  left: 10%; /* Move closer to the center */
+}
+
+.slick-next {
+  right: 10%; /* Move closer to the center */
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 80px; /* Increase the size of the arrows */
+    color: white; /* Change color if needed */
 }

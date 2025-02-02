@@ -63,13 +63,19 @@ const MovieRow = () => {
 
   return (
     <>
-      <Slider {...settings}>
-        {movies.map(movie => (
-          <div key={movie._id} onClick={() => openModal(movie)} className="movie-card">
-            <img src={movie.image} alt={movie.title} />
-          </div>
-        ))}
-      </Slider>
+      <div className="movie-row">
+        <Slider {...settings}>
+          {movies.map(movie => (
+            <div key={movie._id} onClick={() => openModal(movie)} className="movie-card">
+              <img 
+                src={movie.image} 
+                alt={movie.title} 
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
       {isModalOpen && selectedMovie && (
         <MovieModal isOpen={isModalOpen} onRequestClose={closeModal} movie={selectedMovie} />
       )}

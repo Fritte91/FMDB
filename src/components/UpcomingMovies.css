@@ -5,7 +5,7 @@
 }
 
 .movie-card {
-  background: #1e1e1e; /* Dark background for movie cards */
+  background: transparent; /* Dark background for movie cards */
   border-radius: 8px; /* Rounded corners */
   padding: 10px; /* Padding inside the card */
   text-align: center; /* Center text */
