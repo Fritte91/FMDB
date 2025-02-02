@@ -1,14 +1,28 @@
 .search-bar {
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center items vertically */
+  background-color: rgba(104, 101, 101, 0.8); /* Semi-transparent white background */
+  border-radius: 6px; /* Rounded corners */
+  padding: 10px; /* Padding inside the search bar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  
 }
 
 .search-bar input {
-  padding: 10px; /* Add padding for input */
+  padding: 15px; /* Add padding for input */
   border: 1px solid #007bff; /* Border color */
-  border-radius: 4px; /* Rounded corners */
+  border-radius: 6px; /* Rounded corners */
   margin-right: 10px; /* Space between input and button */
   flex: 1; /* Allow input to grow */
+  font-size: 18px;
+  background-color: rgba(44, 43, 43, 0.9); /* Slightly more opaque background for input */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+  color: white;
+}
+
+.search-bar input:focus {
+  border-color: #fdfdfd; /* Darker border color on focus */
+  outline: none; /* Remove default outline */
 }
 
 .search-bar button {
@@ -16,10 +30,12 @@
   background-color: #007bff; /* Button color */
   color: white; /* Text color */
   border: none; /* Remove border */
-  border-radius: 4px; /* Rounded corners */
+  border-radius: 8px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .search-bar button:hover {
   background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }

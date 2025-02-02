@@ -25,20 +25,13 @@ const MovieModal = ({ isOpen, onRequestClose, movie }) => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-      <div>
-        {movie.torrents.map(torrent => (
-          <div key={torrent.url}>
-            <a href={torrent.url} target="_blank" rel="noopener noreferrer">
-              Download {torrent.quality} Torrent
-            </a>
-          </div>
-        ))}
-      </div>
-      <img 
-        src={movie.image} 
-        alt={movie.title} 
-        loading="lazy" // Enable lazy loading for modal image
-      />
+      <div class="download-links">
+  <a href={movie.torrentLink} target="_blank" rel="noopener noreferrer" class="download-button">
+    1080P
+  </a>
+</div>
+
+      
       <button onClick={onRequestClose}>Close</button>
     </Modal>
   );

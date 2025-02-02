@@ -43,6 +43,7 @@ const UpcomingMovies = () => {
   return (
     <div>
       <h2>Upcoming Movies</h2>
+      <div class="slider-container">
       <Slider {...settings}>
         {movies.map((movie) => (
           <div key={movie.id} className="movie-card">
@@ -50,6 +51,7 @@ const UpcomingMovies = () => {
           </div>
         ))}
       </Slider>
+      </div>
     </div>
   );
 };

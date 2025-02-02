@@ -6,7 +6,7 @@ import SearchBar from '../SearchBar'; // Import the SearchBar component
 const Navbar = ({ onSearch }) => {
   return (
     <nav className="navbar">
-      <div className="navbar-brand">Freddy's Movie DB</div>
+      <Link to="/" className="navbar-brand">Freddy's Movie DB</Link>
       <SearchBar onSearch={onSearch} /> {/* Move the SearchBar above the links */}
       <ul className="navbar-links">
         <li><Link to="/getting-started">Getting Started</Link></li>

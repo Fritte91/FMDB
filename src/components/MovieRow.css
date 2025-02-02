@@ -130,5 +130,5 @@
 
 .slick-prev:before, .slick-next:before {
     font-size: 80px; /* Increase the size of the arrows */
-    color: white; /* Change color if needed */
+    color: #08d7e6; /* Change color if needed */
 }

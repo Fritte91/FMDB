@@ -63,7 +63,7 @@ const MovieRow = () => {
 
   return (
     <>
-      <div className="movie-row">
+      <div className="slider-container">
         <Slider {...settings}>
           {movies.map(movie => (
             <div key={movie._id} onClick={() => openModal(movie)} className="movie-card">

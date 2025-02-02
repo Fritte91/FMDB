@@ -31,7 +31,7 @@ const MovieSearchPage = ({ query }) => {
 
   return (
     <div className="page-container">
-      
+      <nav className="navbar"> {/* Your Navbar Component Here */} </nav>
       <div className="movie-search-results">
         <h2>Search Results for "{query}"</h2>
         <div className="movie-grid">
@@ -49,7 +49,7 @@ const MovieSearchPage = ({ query }) => {
           <MovieModalYts isOpen={isModalOpen} onRequestClose={closeModal} movie={selectedMovie} />
         )}
       </div>
-      
+      <footer className="footer"> {/* Your Footer Component Here */} </footer>
     </div>
   );
 };

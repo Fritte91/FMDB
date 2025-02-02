@@ -27,7 +27,7 @@
 
 .navbar-brand {
   font-size: 24px; /* Increase font size */
-  color: #ffffff; /* White text */
+  color: #08d7e6; /* White text */
 }
 
 .navbar-links {
@@ -40,12 +40,32 @@
 }
 
 .navbar-links a {
-  color: #ffffff; /* White text */
+  color: #ffffff; /* White text color */
   text-decoration: none; /* Remove underline */
+  position: relative; /* Position relative for the pseudo-element */
+  padding: 10px 15px; /* Padding for better click area */
+  transition: color 0.3s; /* Smooth transition for text color */
+  font-size: 20px;
 }
 
 .navbar-links a:hover {
-  text-decoration: underline; /* Underline on hover */
+  color: #08d7e6; /* Change text color on hover */
+}
+
+.navbar-links a::after {
+  content: ''; /* Create a pseudo-element */
+  display: block; /* Make it a block element */
+  height: 2px; /* Height of the underline */
+  background: #08d7e6; /* Color of the underline */
+  width: 0; /* Start with width 0 */
+  transition: width 0.3s; /* Smooth transition for width */
+  position: absolute; /* Position it absolutely */
+  left: 0; /* Align to the left */
+  bottom: -5px; /* Position it below the text */
+}
+
+.navbar-links a:hover::after {
+  width: 100%; /* Fill the width on hover */
 }
 
 .navbar-search {
