@@ -41,7 +41,7 @@
         "trailerUrl": "https://www.youtube.com/embed/yEddsSwweyE?si=nMmxMGDWf3bvMWKM",
         "torrentLink": "https://yts.mx/torrent/download/8133D62F35C42D4DA1A5FDE3DC381334BBC69985",
         "subtitleLink": "https://example.com/subtitle",
-        "image": "/assets/A haunting in Venice.jpeg"
+        "image": "/assets/A Haunting in Venice.jpeg"
     },
     {
         "title": "Airplane Mode",
@@ -712,7 +712,7 @@
         "trailerUrl": "https://www.youtube.com/embed/sample_trailer_id",
         "torrentLink": "https://example.com/torrent",
         "subtitleLink": "https://example.com/subtitle",
-        "image": "/assets/Jeff Who lives At Home.jpg"
+        "image": "/assets/Jeff Who lives Atm Home.jpeg"
     },
     {
         "title": "Jigsaw",
@@ -822,7 +822,7 @@
         "trailerUrl": "https://www.youtube.com/embed/sample_trailer_id",
         "torrentLink": "https://example.com/torrent",
         "subtitleLink": "https://example.com/subtitle",
-        "image": "/assets/Lights out.jpg"
+        "image": "/assets/Lights Out.jpg"
     },
     {
         "title": "Lincoln",
@@ -987,7 +987,7 @@
         "trailerUrl": "https://www.youtube.com/embed/sample_trailer_id",
         "torrentLink": "https://example.com/torrent",
         "subtitleLink": "https://example.com/subtitle",
-        "image": "/assets/No Escape.jpg"
+        "image": "/assets/No escape.jpg"
     },
     {
         "title": "No Exit",
@@ -1866,7 +1866,7 @@
         "trailerUrl": "https://www.youtube.com/embed/VHmn9U3c0zA?si=1MYsOx88FjJMp5Ug",
         "torrentLink": "https://yts.mx/torrent/download/38B17DA655030293E196DEDDAFEFD0B3627E513C",
         "subtitleLink": "https://example.com/subtitle",
-        "image": "/assets/The Report.jpeg"
+        "image": "/assets/The Report.jpg"
     },
     {
         "title": "The Rhythm section",
@@ -1910,7 +1910,7 @@
         "trailerUrl": "https://www.youtube.com/embed/91-Z20uttEk?si=ah0WkBsxBEdYmVQX",
         "torrentLink": "https://yts.mx/torrent/download/DAB906462451F5F27377AA104E9EA88618B5DA4F",
         "subtitleLink": "https://example.com/subtitle",
-        "image": "/assets/The Strangers Prey At Nght.jpg"
+        "image": "/assets/The Strangers Prey At Night.jpg"
     },
     {
         "title": "The Taking Of Pelham 1 2 3",
@@ -2042,7 +2042,7 @@
         "trailerUrl": "https://www.youtube.com/embed/SsOCnqigA7g?si=CfMD58I_3VpBvlEt",
         "torrentLink": "https://yts.mx/torrent/download/33669B93C5E576CB3E157ECEC41BD02918984463",
         "subtitleLink": "https://example.com/subtitle",
-        "image": "/assets/Vanguard.jpeg"
+        "image": "/assets/Vanguard.jpg"
     },
     {
         "title": "Veronica",
@@ -2164,5 +2164,8 @@
         "torrentLink": "https://yts.mx/torrent/download/EEF61654F074DC236DBE29E0E7CBD8FCE2BA5DEF",
         "subtitleLink": "https://example.com/subtitle",
         "image": "/assets/Zeros And Ones.jpeg"
-    }
+    },
+
+
+
 ]

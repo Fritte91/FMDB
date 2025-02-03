@@ -22,6 +22,7 @@ import HorrorMovieRow from './components/GenreMovieRows/HorrorMovieRow';
 import ThrillerMovieRow from './components/GenreMovieRows/ThrillerMovieRow';
 import ScifriMovieRow from './components/GenreMovieRows/ScifiMovieRow';
 import DocumentaryMovieRow from './components/GenreMovieRows/DocumentaryMovieRow';
+import AdvancedSearchPage from './components/AdvancedSearchPage';
 
 
 
@@ -39,6 +40,8 @@ function App() {
       <Navbar onSearch={handleSearch} />
       <Routes>
         <Route path="/getting-started" element={<GettingStarted />} />
+        
+        <Route path="/AdvancedSearchPage" element={<AdvancedSearchPage />} /> {/* New advanced search page */}
         <Route path="/" element={searchQuery ? <MovieSearchPage query={searchQuery} /> : (
           <>
             <h1>FMDB - Movie Database</h1>

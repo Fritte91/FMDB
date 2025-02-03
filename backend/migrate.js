@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
-const fs = require('fs');
-const path = require('path');
-const Movie = require('./models/Movie'); // Import your Movie model
+import mongoose from 'mongoose';
+import fs from 'fs';
+import path from 'path';
+import Movie from './models/Movie.js'; // Ensure to add .js extension
 
 const uri = 'mongodb+srv://FreddyLindberg:Bekind77@moviedb.pythd.mongodb.net/?retryWrites=true&w=majority&appName=MovieDB';
 
@@ -11,7 +11,7 @@ const migrateData = async () => {
     console.log('MongoDB Atlas connected');
 
     // Read the movies.json file
-    const filePath = path.join(__dirname, 'movies.json');
+    const filePath = path.join(process.cwd(), 'movies.json'); // Use process.cwd() for the correct path
     const data = fs.readFileSync(filePath, 'utf8');
     const movies = JSON.parse(data); // Parse the JSON data
 
