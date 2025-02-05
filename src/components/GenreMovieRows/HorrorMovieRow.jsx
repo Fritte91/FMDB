@@ -20,6 +20,11 @@ const HorrorMovieRow = () => {
   }, []);
 
   const openModal = (movie) => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      alert('You need to be logged in to view movie data. Please log in.');
+      return;
+    }
     setSelectedMovie(movie);
     setIsModalOpen(true);
   };
