@@ -47,6 +47,12 @@ const AdvancedSearchPage = () => {
           <option value="action">Action</option>
           <option value="drama">Drama</option>
           <option value="comedy">Comedy</option>
+          <option value="crime">Crime</option>
+          <option value="documentary">Documentary</option>
+          <option value="fantasy">Fantasy</option>
+          <option value="horror">Horror</option>
+          <option value="sci-fi">Sci-Fi</option>
+          <option value="thriller">Thriller</option>
           {/* Add more genres as needed */}
         </select>
         <input 
@@ -69,7 +75,6 @@ const AdvancedSearchPage = () => {
           movies.map(movie => (
             <div key={movie.id} className="movie-card" onClick={() => openModal(movie)}>
               <img src={movie.medium_cover_image} alt={movie.title} loading="lazy" />
-              <h3>{movie.title}</h3>
             </div>
           ))
         ) : (

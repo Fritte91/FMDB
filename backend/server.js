@@ -1,46 +1,40 @@
 import express from 'express';
-import mongoose from 'mongoose';
 import cors from 'cors';
-import connectDB from './db.js'; // Import the connectDB function
-import Movie from './models/Movie.js'; // Correct import for default export
-import fetch from 'node-fetch'; // Make sure to install node-fetch
+import dotenv from 'dotenv';
+import connectDB from './db.js';
+import authRoutes from './routes/authRoutes.js';
+import Movie from './models/Movie.js'; // Ensure this import is correct
+
+dotenv.config();
+connectDB();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors()); // Enable CORS for all routes
-app.use(express.json()); // Middleware to parse JSON
+// Middleware
+app.use(cors());
+app.use(express.json());
 
-// Connect to MongoDB
-connectDB();
+// Routes
+app.use('/api', authRoutes);
 
-// Proxy endpoint for fetching movies from YTS API
-app.get('/api/movies', async (req, res) => {
+// Movie retrieval route
+app.get('/movies', async (req, res) => {
   try {
-    const response = await fetch('https://yts.mx/api/v2/list_movies.json?genre=action');
-    const data = await response.json();
-    res.json(data);
+    const movies = await Movie.find(); // Fetch all movies from the database
+    res.json(movies);
   } catch (error) {
     console.error('Error fetching movies:', error);
-    res.status(500).json({ error: 'Failed to fetch movies' });
+    res.status(500).json({ message: 'Server error fetching movies' });
   }
 });
 
-// Sample route
+// Test Route
 app.get('/', (req, res) => {
   res.send('Hello from the backend!');
 });
 
-app.get('/movies', async (req, res) => {
-  try {
-    const movies = await Movie.find(); // Fetch movies from MongoDB
-    res.json(movies); // Send the movies data as a response
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
-
-// Start the server
+// Start Server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

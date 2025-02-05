@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-route
 
 import Navbar from './components/Navbar-Footer/Navbar';
 import Footer from './components/Navbar-Footer/Footer';
+import Login from './components/Login';
 import './App.css'
 // src/main.jsx or src/App.jsx
 import 'slick-carousel/slick/slick.css';
@@ -40,17 +41,18 @@ function App() {
       <Navbar onSearch={handleSearch} />
       <Routes>
         <Route path="/getting-started" element={<GettingStarted />} />
-        
+        <Route path="/login" element={<Login />} />
         <Route path="/AdvancedSearchPage" element={<AdvancedSearchPage />} /> {/* New advanced search page */}
         <Route path="/" element={searchQuery ? <MovieSearchPage query={searchQuery} /> : (
           <>
+            
             <h1>FMDB - Movie Database</h1>
             <UpcomingMovies />
-            <h2> Popular Movies</h2>
+            <h2> Freddy's Collection</h2>
             <MovieRow />
-            <h2> Top Rated Movies</h2>
+            <h2> Freddy's Collection</h2>
             <MovieRow />
-            <h2> Upcoming Movies</h2>
+            <h2> Freddy's Collection</h2>
             <MovieRow />
             
             <ActionMovieRow />
