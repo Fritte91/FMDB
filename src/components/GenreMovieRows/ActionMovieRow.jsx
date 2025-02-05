@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
-import MovieModalYts from '../MovieModalYts';
-import '../MovieRow.css';
+import { toast, ToastContainer } from 'react-toastify';
+import MovieModalYts from '../MovieModalYts'; // Import your modal component
+import '../MovieRow.css'; // Ensure you have the CSS for styling
 
 const ActionMovieRow = () => {
   const [movies, setMovies] = useState([]);
@@ -23,7 +24,7 @@ const ActionMovieRow = () => {
   const openModal = (movie) => {
     const token = localStorage.getItem('token');
     if (!token) {
-      alert('You need to be logged in to view movie data. Please log in.');
+      toast.error('You need to be logged in to view movie data. Please log in.');
       return;
     }
     setSelectedMovie(movie);
@@ -62,6 +63,17 @@ const ActionMovieRow = () => {
       {isModalOpen && selectedMovie && (
         <MovieModalYts isOpen={isModalOpen} onRequestClose={closeModal} movie={selectedMovie} />
       )}
+      <ToastContainer 
+        position="bottom-right" 
+        autoClose={5000} 
+        hideProgressBar={false} 
+        newestOnTop={false} 
+        closeOnClick 
+        rtl={false} 
+        pauseOnFocusLoss 
+        draggable 
+        pauseOnHover 
+      />
     </>
   );
 };

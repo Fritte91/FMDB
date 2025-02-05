@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'; // Link to the separate CSS file for login styles
 
 const Login = () => {
@@ -13,7 +15,7 @@ const Login = () => {
     e.preventDefault();
 
     if (!username || !password) {
-      setError('Please enter both username and password.');
+      toast.error('Please enter both username and password.');
       return;
     }
 
@@ -31,14 +33,14 @@ const Login = () => {
       const data = await response.json();
 
       if (!response.ok) {
-        setError(data.message || 'Invalid username or password.');
+        toast.error(data.message || 'Invalid username or password.');
       } else {
         localStorage.setItem('token', data.token);
-        alert('Login successful!');
+        toast.success('Login successful!');
         window.location.href = '/';
       }
     } catch (error) {
-      setError('Failed to log in. Please try again later.');
+      toast.error('Failed to log in. Please try again later.');
     }
 
     setIsSubmitting(false);
@@ -49,7 +51,7 @@ const Login = () => {
     e.preventDefault();
 
     if (!username || !password) {
-      setError('Please enter both username and password.');
+      toast.error('Please enter both username and password.');
       return;
     }
 
@@ -67,13 +69,13 @@ const Login = () => {
       const data = await response.json();
 
       if (!response.ok) {
-        setError(data.message || 'Registration failed.');
+        toast.error(data.message || 'Registration failed.');
       } else {
-        alert('Registration successful! Please log in.');
+        toast.success('Registration successful! Please log in.');
         setIsRegistering(false);
       }
     } catch (error) {
-      setError('Failed to register. Please try again later.');
+      toast.error('Failed to register. Please try again later.');
     }
 
     setIsSubmitting(false);
@@ -121,6 +123,18 @@ const Login = () => {
           {isRegistering ? 'Already have an account? Login' : 'Create a new account'}
         </button>
       </div>
+
+      <ToastContainer 
+        position="bottom-right" 
+        autoClose={5000} 
+        hideProgressBar={false} 
+        newestOnTop={false} 
+        closeOnClick 
+        rtl={false} 
+        pauseOnFocusLoss 
+        draggable 
+        pauseOnHover 
+      />
     </div>
   );
 };

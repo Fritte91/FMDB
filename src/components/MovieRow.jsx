@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import MovieModal from './MovieModal';
 import './MovieRow.css';
 
@@ -23,7 +25,7 @@ const MovieRow = () => {
   const openModal = (movie) => {
     const token = localStorage.getItem('token');
     if (!token) {
-      alert('You need to be logged in to view movie data. Please log in.');
+      toast.error('You need to be logged in to view movie data. Please log in.');
       return;
     }
     setSelectedMovie(movie);
@@ -84,6 +86,17 @@ const MovieRow = () => {
       {isModalOpen && selectedMovie && (
         <MovieModal isOpen={isModalOpen} onRequestClose={closeModal} movie={selectedMovie} />
       )}
+      <ToastContainer 
+        position="bottom-right" 
+        autoClose={5000} 
+        hideProgressBar={false} 
+        newestOnTop={false} 
+        closeOnClick 
+        rtl={false} 
+        pauseOnFocusLoss 
+        draggable 
+        pauseOnHover 
+      />
     </>
   );
 };

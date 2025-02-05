@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
+import { toast, ToastContainer } from 'react-toastify';
 import MovieModalYts from '../MovieModalYts'; // Import your modal component
-
 import '../MovieRow.css'; // Ensure you have the CSS for styling
 
 const AdventureMovieRow = () => {
@@ -22,7 +22,7 @@ const AdventureMovieRow = () => {
   const openModal = (movie) => {
     const token = localStorage.getItem('token');
     if (!token) {
-      alert('You need to be logged in to view movie data. Please log in.');
+      toast.error('You need to be logged in to view movie data. Please log in.');
       return;
     }
     setSelectedMovie(movie);
@@ -72,6 +72,17 @@ const AdventureMovieRow = () => {
           onSelectMovie={handleSelectMovie}
         />
       )}
+      <ToastContainer 
+        position="bottom-right" 
+        autoClose={5000} 
+        hideProgressBar={false} 
+        newestOnTop={false} 
+        closeOnClick 
+        rtl={false} 
+        pauseOnFocusLoss 
+        draggable 
+        pauseOnHover 
+      />
     </>
   );
 };
