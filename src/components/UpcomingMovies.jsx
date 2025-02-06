@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Slider from 'react-slick'; // Import Slider from react-slick
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import { EffectCoverflow, Pagination } from 'swiper/modules'; // Adjusted import
 import './UpcomingMovies.css'; // Create a CSS file for styling
 
 const UpcomingMovies = () => {
@@ -29,29 +33,30 @@ const UpcomingMovies = () => {
     return <div>Loading...</div>; // Loading state
   }
 
-  // Slider settings
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 7, // Adjust this number based on your design
-    slidesToScroll: 1,
-    centerMode: true, // Center the active slide
-    centerPadding: '60px', // Space around the centered slide
-  };
-
   return (
-    <div>
-      <h2>Upcoming Movies</h2>
-      <div class="slider-container">
-      <Slider {...settings}>
+    <div className="upcoming-movies">
+      <h2>Theater movies</h2>
+      <Swiper
+        modules={[EffectCoverflow, Pagination]} // Use modules prop
+        effect="coverflow"
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView="auto"
+        coverflowEffect={{
+          rotate: 15,
+          stretch: 0,
+          depth: 300,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={{ clickable: true }}
+      >
         {movies.map((movie) => (
-          <div key={movie.id} className="movie-card">
+          <SwiperSlide key={movie.id}>
             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-          </div>
+          </SwiperSlide>
         ))}
-      </Slider>
-      </div>
+      </Swiper>
     </div>
   );
 };
